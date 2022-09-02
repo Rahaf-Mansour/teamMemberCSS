@@ -1,0 +1,158 @@
+* {
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+}
+
+form {
+
+    width: 800px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 300px;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header p {
+    font-size: 16px;
+}
+
+input {
+    border: none;
+    width: 350px;
+}
+
+.search {
+    border-color: transparent;
+    border-bottom: solid rgb(212, 210, 210) 1px;
+    margin: 8px;
+    max-width: 50%;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    color: rgb(141, 141, 141);
+}
+
+.input-button {
+    display: flex;
+    justify-content: space-between;
+    width: 380px;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.btn-esc {
+    display: block;
+    border: none;
+    background-color: white;
+    color: rgb(183, 181, 181);
+    font-size: 14px;
+}
+
+.btn-esc:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.icon-esc {
+    font-size: 30px;
+}
+
+.container .user {
+    max-width: 50%;
+    text-align: left;
+    border: 2px solid rgb(212, 210, 210);
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+label {
+    padding-top: 16px;
+    height: 40px;
+}
+
+input[type="reset"] {
+    background-color: white;
+    color: rgb(141, 141, 141);
+    height: 40px;
+    width: 140px;
+    border-radius: 5px;
+    border: rgb(158, 157, 157) 1px solid;
+    margin-left: 30px;
+}
+
+input[type="reset"]:hover {
+    color: black;
+    border: black solid 1px;
+}
+
+input[type="submit"] {
+    color: white;
+    background-image: linear-gradient(to right, rgb(60, 168, 204), rgb(93, 60, 139));
+    height: 40px;
+    width: 140px;
+    border-radius: 5px;
+}
+
+.user label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 10px;
+    font-weight: bold;
+    color: rgb(179, 179, 179);
+}
+
+.container input:checked+label {
+    color: black;
+    border: 1px solid black;
+    margin-left: -6px;
+}
+
+.user label:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 1px solid gray;
+    color: transparent;
+    position: absolute;
+    right: 6px;
+    top: 16px;
+    border-radius: 50%;
+}
+
+.user label:after {
+    font-family: "FontAwesome";
+    content: "\f00c";
+    position: absolute;
+    right: 6px;
+    top: 16px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 2px solid rgb(67, 197, 19);
+    color: rgb(67, 197, 19);
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: center;
+    transform: scale(0) rotate(0deg);
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+}
+
+.user input[type="checkbox"]:checked+label:after {
+    transform: scale(1) rotate(360deg);
+}
